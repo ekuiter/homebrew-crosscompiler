@@ -15,7 +15,8 @@ class I586ElfBinutils < Formula
 
     mkdir 'build' do
       system '../configure', '--disable-nls', '--target=i586-elf',
-                             "--prefix=#{prefix}"
+                             "--prefix=#{prefix}",
+                             '--disable-werror'
       system 'make all'
       system 'make install'
       FileUtils.mv lib, libexec
