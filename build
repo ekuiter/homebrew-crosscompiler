@@ -4,3 +4,5 @@ read -p "Now building i586-elf-gcc and dependencies. (Enter to continue)"
 brew tap homebrew/homebrew-versions
 brew tap ekuiter/crosscompiler
 brew install i586-elf-gcc
+read -p "Now installing Bochs emulator with X11 debugger. (Enter to continue)"
+brew install bochs
