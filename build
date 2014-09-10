@@ -1,5 +1,5 @@
 read -p "Will now install Homebrew. (Enter to continue)"
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 read -p "Now building i586-elf-gcc and dependencies. (Enter to continue)"
 brew tap homebrew/homebrew-versions
 brew tap ekuiter/crosscompiler
