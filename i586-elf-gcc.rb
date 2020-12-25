@@ -27,7 +27,10 @@ class I586ElfGcc < Formula
                              '--without-headers',
                              '--disable-shared',
                              '--disable-libssp',
-                             '--disable-werror'
+                             '--disable-werror',
+                             '--with-gmp=$(brew info gmp | head -n3 | tail -n1 | cut -d\' \' -f1)/include',
+                             '--with-mpfr=$(brew info mpfr | head -n3 | tail -n1 | cut -d\' \' -f1)/include',
+                             '--with-mpc=$(brew info libmpc | head -n3 | tail -n1 | cut -d\' \' -f1)/include'
       system 'make all-gcc'
       system 'make install-gcc'
       FileUtils.ln_sf binutils.prefix/"i586-elf", prefix/"i586-elf"
